@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Подключаем скрипт reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<div class="login">
+    <div class="login-content">
+        <form id="login_form" action="/" method="POST" name="login_form">
+            {% csrf_token %}
+            <h1 class="text-center">COLOSS</h1>
+            <div class="text-inverse text-opacity-50 text-center mb-4">
+                For your protection, please verify your identity.
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Login <span class="text-danger">*</span></label>
+                <input type="text" name="username" class="form-control form-control-lg bg-inverse bg-opacity-5" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex">
+                    <label class="form-label">Password <span class="text-danger">*</span></label>
+                </div>
+                <input type="password" name="password" class="form-control form-control-lg bg-inverse bg-opacity-5" placeholder="Enter your password" required>
+            </div>
+            <!-- Добавляем reCAPTCHA с указанием callback функции -->
+            <div class="g-recaptcha" data-sitekey="6LcFmeopAAAAABdmnx-VK5O0WcfqTAu9zG0zNBUU">
+
+                ХУЙ
+            </div>
+            <button type="button" id="submit-button" class="btn btn-outline-theme btn-lg d-block w-100 fw-500 mb-3">Sign In</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

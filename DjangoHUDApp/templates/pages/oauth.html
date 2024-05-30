@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oauth</title>
+</head>
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<body>
+
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div>
+        <form id="ouath_form" action="/" method="POST" name="ouath_form">
+            {% csrf_token %}
+            <h1 class="text-center">COLOSS</h1>
+            <div class="mb-5 mt-5 w-350px">
+                <label class="form-label">Google Auth code<span class="text-danger">*</span></label>
+                <input type="text" name="code" class="form-control form-control-lg bg-inverse bg-opacity-5" placeholder="Enter your code" required>
+            </div>
+
+           <a href="index/"> <button type="button" id="submit-button" class="btn btn-outline-theme btn-lg w-100 fw-500">Let me In</button></a>
+        </form>
+    </div>
+</div>
+ r
+
+</body>
+{% endblock %}
+
+</html>
+
+
+
+
